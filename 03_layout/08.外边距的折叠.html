@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			.box1,
+			.box2 {
+				width: 200px;
+				height: 200px;
+				font-size: 100px;
+			}
+
+			/* 
+            	垂直外边距的重叠（折叠）
+                - 相邻的垂直方向外边距会发生重叠现象
+                - 兄弟元素
+                    - 兄弟元素间的相邻垂直外边距会取两者之间的较大值（两者都是正值）
+                    - 特殊情况：
+		                        如果相邻的外边距一正一负，则取两者的和
+		                        如果相邻的外边距都是负值，则取两者中|绝对值|较大的
+
+                    - 兄弟元素之间的外边距的重叠，对于开发是有利的，所以我们不需要进行处理
+
+
+                - 父子元素
+                    - 父子元素间相邻外边距，子元素的会传递给父元素（上外边距）
+                    - 父子外边距的折叠会影响到页面的布局，必须要进行处理
+                    	视频里面讲了两种处理方式
+                    	一种是利用padding的方式，如何修改box3的height
+                    	第二种是依旧使用margin，为box3添加一个边框border，将两个盒子模型隔开，
+                    	但是这种方式要调整box3的高度和box4的margin-top
+        
+        	 */
+
+			.box1 {
+				background-color: #bfa;
+				/* 设置一个下外边距 */
+				margin-bottom: 100px;
+			}
+
+			/*外边距重叠*/
+
+			.box2 {
+				background-color: orange;
+				/* 设置一个上外边距 */
+				margin-top: 100px;
+			}
+
+			.box3 {
+				width: 200px;
+				height: 200px;
+				/* height:199px;
+				border-top: 1px #bfa solid; */
+				background-color: #bfa;
+				/* padding-top: 100px; */
+				/* 后面高度塌陷的解决方案，开启元素的BFC模式 */
+				/* overflow: hidden; */
+
+			}
+
+			.box4 {
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+				/* margin-top: 100px; */
+				/* margin-top: 99px; */
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="box3">
+			<div class="box4"></div>
+		</div>
+
+		<!-- <div class="box1"></div>
+		<div class="box2"></div> -->
+
+	</body>
+
+</html>

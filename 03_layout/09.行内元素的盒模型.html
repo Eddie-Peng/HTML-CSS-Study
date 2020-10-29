@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Document</title>
+		<style>
+			/* section1 */
+			.s1 {
+				background-color: yellow;
+				/* 
+            	行内元素的盒模型
+                - 行内元素不支持设置宽度和高度
+                - 行内元素可以设置padding，但是垂直方向padding不会影响页面的布局
+                - 行内元素可以设置border，垂直方向的border不会影响页面的布局
+                - 行内元素可以设置margin，垂直方向的margin不会影响布局
+                
+             	*/
+				/* 	width: 100px;
+         			height: 100px; 
+             	
+             	* */
+				/*padding: 100px;*/
+				/*border: 100px solid red;*/
+				margin: 100px;
+			}
+
+			.box1 {
+				width: 200px;
+				height: 200px;
+				background-color: #bfa;
+			}
+
+			a {
+				/* 
+                display 用来设置元素显示的类型
+                    	可选值：
+	                        inline 将元素设置为行内元素
+	                        block 将元素设置为块元素
+	                        inline-block 将元素设置为行内块元素 
+	                    	行内块，既可以设置宽度和高度又不会独占一行
+	                        table 将元素设置为一个表格
+	                        none 元素不在页面中显示
+							
+                visibility 用来设置元素的显示状态
+                    	可选值：
+	                        visible 默认值，元素在页面中正常显示
+	                        hidden 元素在页面中隐藏 不显示，但是依然占据页面的位置
+	                        	这就是display的none值和visibility的hidden值的区别
+             	*/
+				display: block;
+				/* visibility: hidden; */
+				width: 100px;
+				height: 100px;
+				background-color: orange;
+			}
+			
+			/*  */
+			/* 
+			table
+			    使该元素按table样式渲染
+			table-row
+			    使该元素按tr样式渲染
+			table-cell
+			    使该元素按td样式渲染
+			table-row-group
+			    使该元素按tbody样式渲染
+			table-header-group
+			    使该元素按thead样式渲染
+			table-footer-group
+			    使该元素按tfoot样式渲染
+			table-caption
+			    使该元素按caption样式渲染
+			table-column
+			    使该元素按col样式渲染
+			table-column-group
+			    使该元素按colgroup样式渲染 */
+			/*  */
+			
+			
+			/* section2 */
+			/* //设置表格 */
+			.is-Table {
+				width: 100%;
+				height: 200px;
+				display: table;
+				background-color: red;
+			}
+
+			/* //设置td 并且其中内容垂直居中 */
+			.Table-Cell {
+				display: table-cell;
+				vertical-align: middle;
+				background-color: blue;
+			}
+
+			/* //设置td里面的内容，并且水平居中 */
+			.Center-Block {
+				width: 50%;
+				height: 100px;
+				margin: 0 auto;
+				background-color: red;
+				text-align: center;
+			}
+
+			/* section3 */
+			.tablecss {
+				margin-top: 200px;
+				width: 100%;
+				height: 200px;
+				background-color: blue;
+				display: table;
+			}
+
+			.tabletr {
+				display: table-row;
+				background-color: red;
+			}
+
+			.tabletd {
+				display: table-cell;
+				background-color: orange;
+				border: 1px solid;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- section1 -->
+		<a href="javascript:;">超链接</a>
+		<a href="javascript:;">超链接</a>
+
+		<span class="s1">我是span</span>
+		<span class="s1">我是span</span>
+
+		<div class="box1"></div>
+		<!-- section2 -->
+		<!-- //首先让div成为一个表格 -->
+		<div class="is-Table">
+			<!-- //在其内部创建一个td -->
+			<div class="Table-Cell">
+				<!-- //此时运用td的基础属性来设置当前的内容 -->
+				<div class="Center-Block">
+					<!-- CONTENT -->
+					123
+				</div>
+			</div>
+		</div>
+		<!-- section3 -->
+		<div class="tablecss">
+			<div class="tabletr">
+				<div class="tabletd">
+					1
+				</div>
+				<div class="tabletd">
+					2
+				</div>
+				<div class="tabletd">
+					3
+				</div>
+			</div>
+
+			<div class="tabletr">
+				<div class="tabletd">
+					1
+				</div>
+				<div class="tabletd">
+					2
+				</div>
+				<div class="tabletd">
+					3
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

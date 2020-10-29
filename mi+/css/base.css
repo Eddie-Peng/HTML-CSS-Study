@@ -1,0 +1,28 @@
+/*高度塌陷问题，和外边距重叠问题的解决方案*/
+.clearfix::before,
+.clearfix::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+/* 去除a的下划线 */
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+body{
+	font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	color: #333;
+	/*	设置body的最小宽度，
+	 	让页面缩小后，不会影响到容器中的内容的排布
+	 * */
+    min-width: 1226px;
+}
+/*设置一个类固定容器的宽度和位置*/
+.w{
+	/*固定容器宽度*/
+	width: 1226px;
+	/*使容器居中*/
+	margin: 0 auto;
+}

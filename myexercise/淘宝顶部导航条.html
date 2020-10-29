@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>淘宝网顶部导航条</title>
+		<!--引入重置样式表-->
+		<link rel="stylesheet" href="css/reset.css" />
+		<!--引入图标字体-->
+		<link rel="stylesheet" href="fa/css/all.css" />
+		<style>
+			body {
+				font: 12px/1.5 tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+			}
+			
+			.top-bar-warpper {
+				width: 100%;
+				background-color: #f5f5f5;
+				border-bottom: 1px solid #EEEEEE;
+			}
+			
+			.top-bar {
+				width: 1190px;
+				height: 35px;
+				line-height: 35px;
+				margin: 0 auto;
+				position: relative;
+			}
+			
+			.top-bar .location {
+				color: #3c3c3c;
+			}
+			
+			.top-bar i {
+				color: #9c9c9c;
+			}
+			
+			.top-bar .my-vertical {
+				color: #ddd;
+			}
+			
+			.top-bar a {
+				color: #6C6C6C;
+				text-decoration: none;
+			}
+			
+			.top-bar .number {
+				font-weight: bold;
+			}
+			
+			.top-bar .fa-shopping-cart,
+			.top-bar .fa-align-justify,
+			.top-bar .number {
+				color: #f40;
+			}
+			
+			.top-bar .fa-shopping-cart,
+			.top-bar .fa-align-justify,
+			.top-bar .fa-angle-down,
+			.top-bar .fa-star {
+				font-size: 9px;
+			}
+			
+			.top-bar .fa-shopping-cart,
+			.top-bar .fa-align-justify,
+			.top-bar .fa-star {
+				margin-right: 5px;
+			}
+			
+			.top-bar .hava-down {
+				margin-right: 14px;
+			}
+			
+			.top-bar a:hover {
+				color: #FF4400;
+			}
+			
+			.top-bar .color-span:hover a {
+				color: #F40;
+			}
+			
+			.top-bar .color-span:hover i {
+				color: #F40;
+			}
+			
+			.nav-left {
+				float: left;
+			}
+			
+			.nav-left .location-list {
+				display: none;
+				width: 320px;
+				height: 436px;
+				background-color: white;
+				border: 1px solid rgb(204, 204, 204);
+				/* 设置绝对定位，使其不占据页面的位置 */
+				position: absolute;
+				top: 36px;
+				z-index: 999;
+				box-shadow: 0 2px 2px rgba(0, 0, 0, .2)
+			}
+			
+			.the-li:hover .location-list {
+				display: block;
+			}
+			
+			
+			.current-location {
+				border: 1px solid transparent;
+				border-bottom: none;
+				position: relative;
+				z-index: 9999;
+			}
+			
+			.the-li:hover .current-location {
+				background-color: white;
+				border: 1px solid rgb(204, 204, 204);
+				border-top: 1px solid transparent;
+				border-bottom: none;
+				padding-bottom: 1px;
+				
+			}
+			.nav-left li {
+				float: left;
+				padding: 0 6px;
+			}
+			
+			.nav-right {
+				float: right;
+			}
+			
+			.nav-right li {
+				float: left;
+				padding: 0 6px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--导航条外部容器-->
+		<div class="top-bar-warpper">
+			<!--导航条内部容器-->
+			<div class="top-bar">
+				<!--左侧导航栏-->
+				<ul class="nav-left">
+					<li class="the-li">
+						<div class="current-location">
+							<span class="location hava-down">中国大陆</span><i class="fas fa-angle-down"></i>
+						</div>
+						<!--放置国家的盒子-->
+						<div class="location-list">
+
+						</div>
+					</li>
+
+					<li>
+						<a href="#" class="hava-down">枯井丨飘雪</a><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<a href="#">手机逛淘宝</a>
+					</li>
+				</ul>
+				<!--右侧导航栏-->
+				<ul class="nav-right">
+					<li>
+						<a href="#" class="hava-down">我的淘宝</a><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<a href="#" class="hava-down"><i class="fas fa-shopping-cart"></i>购物车<span class="number">87</span></a><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<span class="color-span"><a href="#" class="hava-down"><i class="fas fa-star"></i>收藏夹</a></span><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<a href="#">商品分类</a>
+					</li>
+					<li><span class="my-vertical">|</span></li>
+					<li>
+						<a href="#" class="hava-down">千牛卖家中心</a><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<a href="#" class="hava-down">联系客服</a><i class="fas fa-angle-down"></i>
+					</li>
+					<li>
+						<a href="#" class="hava-down"><i class="fas fa-align-justify"></i>网站导航</a><i class="fas fa-angle-down"></i>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
