@@ -33,8 +33,8 @@
                     包含块( containing block )
                         - 正常情况下：
                             包含块就是离当前元素最近的祖先块元素
-                            <div> <div></div> </div>
-                            <div><span><em>hello</em></span></div>
+                            <\div> <div><\/div> <\/div>
+                            <\div><\span><\em>hello<\/em><\/span><\/div>
 
                         - 绝对定位的包含块:
                             包含块就是离它最近的开启了定位的祖先元素，
@@ -42,11 +42,12 @@
 
                         - html（根元素、初始包含块）
 
-            */
+           
 
-            position: absolute;
+            position: absolute; */
             /* left: 0;
             top: 0; */
+			position: absolute;
             bottom: 0;
             right: 0;
         }

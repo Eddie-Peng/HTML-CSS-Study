@@ -12,21 +12,22 @@
 				margin: 0;
 				padding: 0;
 			}
-			
+
 			.box1 {
 				width: 800px;
 				height: 800px;
 				background-color: silver;
 				overflow: hidden;
 			}
-			
+
 			.box1 div {
 				width: 100px;
 				height: 100px;
 				margin-bottom: 100px;
 				margin-left: 10px;
+				position: relative;
 			}
-			
+
 			.box2 {
 				background-color: #bfa;
 				/* 设置box2的动画 */
@@ -71,12 +72,13 @@
                     both 结合了forwards 和 backwards
             */
 				/* animation-fill-mode: both; */
-				animation: test 2s 2 1s alternate;
+				animation: test 4s 2 1s alternate;
 			}
-			
+
 			.box1:hover div {
 				animation-play-state: running;
 			}
+
 			/* 
         动画
             动画和过渡类似，都是可以实现一些动态的效果，
@@ -85,17 +87,51 @@
                 
             设置动画效果，必须先要设置一个关键帧，关键帧设置了动画执行每一个步骤
         */
-			
+
 			@keyframes test {
+
 				/* from表示动画的开始位置 也可以使用 0% */
-				from {
+				/* from {
 					margin-left: 0;
 					background-color: orange;
-				}
+				} */
+
 				/* to动画的结束位置 也可以使用100%*/
-				to {
+				/* to {
 					background-color: red;
 					margin-left: 700px;
+				} */
+
+				/* from-to也相当于0-100% 
+				期间也可以设置不同的百分比*/
+				0% {
+					background: red;
+					left: 0px;
+					top: 0px;
+				}
+
+				25% {
+					background: yellow;
+					left: 200px;
+					top: 0px;
+				}
+
+				50% {
+					background: blue;
+					left: 200px;
+					top: 200px;
+				}
+
+				75% {
+					background: green;
+					left: 0px;
+					top: 200px;
+				}
+
+				100% {
+					background: red;
+					left: 0px;
+					top: 0px;
 				}
 			}
 		</style>
